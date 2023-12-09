@@ -1,4 +1,4 @@
-package org.hello2.demo
+package org.hello2.feature
 
 class ImplicitDemo(implicit val world: String) {
   def hello() = {
@@ -8,7 +8,8 @@ class ImplicitDemo(implicit val world: String) {
 
 
 class Parent {
-  private implicit val world: String = "hello Parent"
+
+  private implicit val world = "hello Parent"
 
   def print() = {
     val demo = new ImplicitDemo()

@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
 lazy val subProject1 = (project in file("scala2"))
   .settings(
     name := "scala2",
-    scalaVersion := "2.13.12",
+    scalaVersion := "2.12.18",
     libraryDependencies += Dependencies.vertxDB2,
     // https://mvnrepository.com/artifact/org.json4s/json4s-core
     libraryDependencies += "org.json4s" %% "json4s-core" % "4.0.7",
@@ -25,3 +25,4 @@ lazy val subProject2 = (project in file("scala3"))
     libraryDependencies += Dependencies.vertxDB2,
     libraryDependencies += Dependencies.db2Driver,
     javacOptions ++= Seq("-encoding", "UTF-8"))
+

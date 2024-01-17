@@ -33,5 +33,20 @@ object Main {
 }
 
 
+case class Ints(ints: Array[Int])
+
+object Method {
+  def sums(ints1:Int*)(implicit ints: Ints)={
+    ints.ints.sum+ints1.sum
+  }
+}
+
+object Main1 {
+  def main(args: Array[String]): Unit = {
+    implicit val ints=Ints(Array(1,2,3))
+    println(Method.sums(1))
+  }
+}
+
 
 
